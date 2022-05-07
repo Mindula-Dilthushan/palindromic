@@ -1,9 +1,13 @@
-with open('data/words.txt', 'r') as file_read:
-    for line in file_read:
-        word = line[::-1]
+with open('data/words.txt', 'r') as file:
+    for line in file:
+        line = line.strip()
 
-        if line == word:
+        def palindrome(s):
+            return s == s[::-1]
+
+        ans = palindrome(line.strip())
+
+        if ans:
             print("this is palindrome..!")
         else:
             print("this is not palindrom..!")
-
